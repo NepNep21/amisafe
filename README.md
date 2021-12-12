@@ -12,3 +12,6 @@ This program checks if you have been affected by the log4j RCE vulnerability, gi
 Windows powershell: .\gradlew.bat build  
 Windows cmd: gradlew.bat build  
 Linux or macOS: ./gradlew build  
+
+
+DISCLAIMER: THIS DOES NOT ENTIRELY PROVE YOU WERE NOT AFFECTED, AN ATTACKER COULD SIMPLY DELETE THE EVIDENCE, THIS IS JUST THE BEST YOU CAN DO WITHOUT WIPING YOUR COMPUTER
