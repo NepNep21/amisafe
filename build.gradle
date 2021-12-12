@@ -1,0 +1,25 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.6.0'
+}
+
+group = 'me.nepnep.amisafe'
+version = '1.0.0'
+
+repositories {
+    mavenCentral()
+}
+
+jar {
+    manifest {
+        attributes('Main-Class': 'MainKt')
+    }
+    from {
+        configurations.runtimeClasspath
+                .findAll { !it.name.endsWith('pom') }
+                .collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
+
+compileKotlin {
+    kotlinOptions.jvmTarget = '1.8'
+}
