@@ -7,7 +7,7 @@ private var matches = 0
 
 fun main() {
     val os = System.getProperty("os.name")
-    println("Enter a path to recursively search in (default is the vanilla launcher's log directory for your platform): ")
+    print("Enter a path to recursively search in (default is the vanilla launcher's log directory for your platform): ")
     val path = readLine()?.ifEmpty {
         if (os.contains("win", true)) {
             "${System.getenv("APPDATA")}/.minecraft/logs"
